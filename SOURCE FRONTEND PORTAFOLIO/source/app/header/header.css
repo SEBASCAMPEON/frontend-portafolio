@@ -1,0 +1,75 @@
+@font-face {
+  font-family: jaapokki-regular;
+  src: url("../../fuentes/jaapokki-regular.ttf");
+}
+body {
+  font-family: "jaapokki-regular", sans-serif;
+  height: 100vh;
+}
+.Header {
+  padding: 0.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #00f;
+  box-shadow: 8px 3px 31px 3px #808080;
+}
+.Header-logo {
+  width: 5%;
+  margin-right: 10px;
+  -webkit-transition: margin-left 0.2s, margin-right 0.2s, -webkit-transform 0.3s;
+}
+.Header-logo:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.Header-titulo {
+  display: inline-block;
+  color: #fff;
+  vertical-align: text-top;
+  margin: 0;
+  padding-right: 0.5em;
+  font-family: "jaapokki-regular", sans-serif;
+  -webkit-transition: font-size 0.5s;
+  border-right: 2px solid #fff;
+}
+.Header-titulo:hover {
+  font-size: 40px;
+}
+.Header-link {
+  background: #fff;
+  color: #000;
+}
+.Header-dev {
+  width: 4%;
+  margin-right: 8px;
+  box-shadow: 0px -1px 16px #000;
+  border-radius: 50%;
+  display: inline-block;
+  float: right;
+  -webkit-transition: all 0.5s ease-out;
+}
+.Header-dev:hover {
+  -webkit-transform: rotate(-360deg);
+}
+@media screen and (max-width: 768px) {
+  .Header {
+    padding: 1.5em;
+  }
+  .Header-logo {
+    width: 12%;
+  }
+  .Header-dev {
+    width: 9%;
+  }
+  .Header-titulo {
+    font-size: 20px;
+  }
+  .Header-titulo:hover {
+    font-size: 25px;
+  }
+}

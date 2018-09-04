@@ -1,0 +1,122 @@
+@font-face {
+  font-family: jaapokki-regular;
+  src: url("../../fuentes/jaapokki-regular.ttf");
+}
+.hvr-shrink {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0,0,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.principal {
+  font-size: 12px;
+  margin-top: 8em;
+  text-align: center;
+  background-image: url("../../img/html.png");
+  background-position: top;
+  background-size: cover;
+  font-family: "jaapokki-regular", sans-serif;
+}
+.inicio {
+  text-align: center;
+  display: inline-block;
+}
+.Tittle_Inicio {
+  font-weight: bold;
+  font-size: 2em;
+  padding: 1em;
+  color: #808080;
+  -webkit-transition: color 0.2s, font-size 0.5s;
+}
+.Tittle_Inicio:hover {
+  color: #2e64fe;
+  font-size: 2.2em;
+}
+.Tittle_languages {
+  color: #000;
+  font-weight: bold;
+  font-family: "jaapokki-regular", sans-serif;
+  padding: 1em;
+  list-style: none;
+  text-decoration: none;
+}
+.Tittle_languages:hover {
+  color: #2e64fe;
+}
+.link_admin {
+  font-weight: bold;
+  text-decoration: none;
+  color: #00f;
+  font-size: 1.5em;
+  background: #ffa500;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  border: 5px solid #000;
+  padding: 0.5em;
+  -webkit-transition: color 0.5s, background 0.5s;
+}
+.link_admin:hover {
+  background: #2e64fe;
+  color: #fff;
+  text-decoration: none;
+}
+.link_user {
+  font-weight: bold;
+  text-decoration: none;
+  color: #00f;
+  font-size: 1.5em;
+  background: #ffa500;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  border: 5px solid #000;
+  padding: 0.5em;
+  -webkit-transition: color 0.5s, background 0.5s;
+  text-decoration: none;
+}
+.link_user:hover {
+  background: #2e64fe;
+  color: #fff;
+  text-decoration: none;
+}
+.list_languages {
+  font-size: 1.5em;
+  color: #000;
+  font-weight: bold;
+  padding: 1em;
+}
+.list_languages:hover {
+  color: #2e64fe;
+}
+.seccion {
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  padding: 1em;
+  color: #000;
+}
+.video {
+  height: 10%;
+  width: 30%;
+  border: 1px solid #00f;
+  padding: 1em;
+  border-radius: 2em;
+  background: #000;
+  margin-left: 5em;
+  display: inline-block;
+  color: #000;
+  margin-bottom: 5em;
+}
+@media screen and (max-width: 750px) {
+  .video {
+    width: 77%;
+    height: 50%;
+  }
+}

@@ -1,0 +1,20 @@
+<div class="categorias">
+<h4>LSTAD DE CATEGORIAS</h4>
+<a href="#categorias/create">CREAR CATEGORIAS</a>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+    </tr>
+  </thead>
+  <body>
+    <tr ng-repeat ="categoria in vms.categoriasList">
+      <td>{{categoria.idCategoria}}</td>
+      <td>{{categoria.nombre}}</td>
+    </tr>
+  </body>
+
+</table>
+<a href="#/">Ir a Inicio</a>
+</div>

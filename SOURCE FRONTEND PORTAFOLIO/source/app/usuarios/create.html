@@ -1,0 +1,30 @@
+<div class="div_user_form container">
+<h2>Formulario de ingreso de Usuarios</h2>
+<div layout= "column"=ng-cloack>
+<md-content layout-padding>
+<form class="user_form" name="usuariosCreate"ng-submit="vms.create()">
+
+
+  <md-input-container class="md-block">
+
+         <input ng-model="vms.usuario.nombres" placeholder="nombres">
+  </md-input-container>
+
+
+<input class="md-block"type="text" placeholder="apellidos" ng-model="vms.usuario.apellidos">
+<input class="input_user"type="tel" placeholder="telefono" ng-model="vms.usuario.telefono">
+<input class="input_user"type="text" placeholder="direccion" ng-model="vms.usuario.direccion">
+<input class="input_user"type="email" placeholder="Email" ng-model="vms.usuario.email">
+<input class="input_user"type="date" placeholder="Fecha de nacimiento" ng-model="vms.usuario.fechaNac">
+<input class="input_user"type="text" placeholder="Sexo" ng-model="vms.usuario.sexo"><!--aqui va un select-->
+<input class="input_user"type="password" placeholder="Contraseña" ng-model="vms.usuario.password">
+<input class="input_user"type="text" ng-model="vms.usuario.idVendedor"><!--aqui va un select-->
+<input class="input_user"type="text" placeholder="Ciudad" ng-model="vms.usuario.idCiudad"><!--aqui va un select-->
+<input class="input_user"type="text" placeholder="Departamento" ng-model="vms.usuario.idDepartamento"><!--aqui va un select-->
+<input class="input_user"type="submit" value="guardar">
+<a href="#/usuarios" >Volver</a>
+<a href="#/">Ir a Inicio</a>
+</form>
+<md-content>
+</div>
+</div>

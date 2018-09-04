@@ -1,0 +1,70 @@
+<div class="principal">
+  <div class=inicio>
+  <h2 class="Tittle_Inicio">Bienvenido al portafolio</h2>
+<a class="button hvr-shrink link_admin" href="#/admin">Ir administración</a>
+<a class="button hvr-shrink link_user" href="#/usuarios">Ir a usuarios</a>
+<a class="button hvr-shrink link_user" href="#/categorias">Ir a categorias</a>
+
+<h4 class="Tittle_languages">Listado de Excelentes Lenguajes de Programación</h4>
+<div class="list_languages" ng-repeat="lenguaje in vm.lenguajes">
+    <li>{{ lenguaje.nombre }}</li>
+</div>
+<section class="seccion">
+</div>
+<video class="video" src="/vid/Never.mp4" controls="controls" height="400px" width="600px"></video>
+
+</section>
+<div class="form">
+ <form name="loginForm"
+            ng-hide="vm.isAuthenticated()"
+            role="form"
+            ng-submit="vm.signIn()"
+            novalidate
+            class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="email"
+                 class="form-control"
+                 placeholder="Email"
+                 required
+                 ng-model="vm.user.email"/>
+        </div>
+        <div class="form-group">
+          <input type="password"
+                 class="form-control"
+                 placeholder="Password"
+                 required
+                 ng-model="vm.user.password"/>
+        </div>
+        <button type="submit" class="hvr-shrink"
+                ng-disabled="loginForm.$invalid"
+                class="btn btn-primary">Ingresar</button>
+      </form>
+  <ul>
+        <li>
+      <a  ng-show="vm.isAuthenticated()"ng-click="vm.logout()">logout</a><!--el is authenticated es para que solo se muestre cuando este loggeado-->
+    </li>
+  </ul>
+      </div>
+</div>
+
+<section ng-controller="ListServiciosCtrl as ServiciosCtrl"><!--Aqui defino el alias nombre del controlador.alias este alias es el que llamare para lo que necesite dentro de esta etiqueta y las etiquetas hijas de la misma-->
+  <form>
+    <div>
+      <input type="text"
+      placeholder="Buscar"
+      ng-show="vm.isAuthenticated()"
+      ng-model="ServiciosCtrl.search"/><!--aqui le apsamos la variable o alias definidda anteriormente en la etiqueta padre en este caso el section-->
+    </div>
+  </form>
+  <div class="container" ng-repeat="servicio in ServiciosCtrl.ServiciosList | filter: ServiciosCtrl.search"><!--el servicio en el Alias + variable que vas a recorrer que se definio en el controller en el this   (var vm = this;
+    vm.ServiciosList=servicios.query())-->
+    <div class="row">
+      <h3>{{servicio.nombre | uppercase}}
+        <span>{{servicio.idCategoria.nombre}}</span>
+      </h3>
+        <p>
+            {{servicio.descripcion}}
+        </p>
+      </div>
+    </div>
+  </section>

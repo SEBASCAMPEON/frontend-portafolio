@@ -1,0 +1,63 @@
+@font-face{
+	font-family jaapokki-regular
+	src url(../../fuentes/jaapokki-regular.ttf)
+}
+
+body
+	font-family "jaapokki-regular", sans-serif
+	height 100 vh
+
+.Header
+	padding 0.5em
+	position fixed
+	top 0
+	left 0
+	width 100%
+	z-index 1000
+	background blue
+	box-shadow 8px 3px 31px 3px gray
+	&-logo
+		width 5%
+		margin-right 10px
+		-webkit-transition margin-left 0.2s,margin-right 0.2s, -webkit-transform 0.3s
+		&:hover
+			-webkit-transform scale(1.5)
+			transform scale(1.5)
+			margin-left 20px
+			margin-right 20px
+	&-titulo
+		display inline-block
+		color white
+		vertical-align text-top
+		margin 0
+		padding-right 0.5em
+		font-family "jaapokki-regular", sans-serif
+		-webkit-transition font-size 0.5s
+		border-right 2px solid white
+		&:hover
+			font-size 40px
+	&-link
+		background white
+		color black
+	&-dev
+		width 4%
+		margin-right 8px
+		box-shadow 0px -1px 16px black
+		border-radius 50%
+		display inline-block
+		float right
+		-webkit-transition all 0.5s ease-out
+		&:hover
+			-webkit-transform rotate(-360deg)
+
+@media screen and (max-width 768px)
+	.Header
+		padding 1.5em
+		&-logo
+			width 12%
+		&-dev
+			width 9%
+		&-titulo
+			font-size 20px
+			&:hover
+				font-size 25px

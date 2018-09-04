@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Plantilla MANGELTECH</title>
+
+    <!-- build:css css/style.min.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="lib/hover/css/hover.css">
+    <link rel="stylesheet" href="lib/hover/css/hover-min.css">
+    <link rel="stylesheet" href="lib/angular-material/angular-material.css">
+    <link rel="stylesheet" href="lib/angular-material/angular-material.min.css">
+
+
+    <!-- endbower -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/app/admin/admin.css">
+    <link rel="stylesheet" href="/app/categorias/categoria.css">
+    <link rel="stylesheet" href="/app/footer/footer.css">
+    <link rel="stylesheet" href="/app/header/header.css">
+    <link rel="stylesheet" href="/app/inicio/inicio.css">
+    <link rel="stylesheet" href="/app/usuarios/usuarios.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+</head>
+
+<body>
+    <!-- El encabezado es el header, solo que no se puede colocar header, porque html,
+    ya tiene una etiqueta con ese nombre -->
+    <div ui-view="encabezado"></div>
+
+    <!-- Inicio contenido Página -->
+    <div ui-view="inicio"></div>
+    <div ui-view="administrador"></div>
+    <div ui-view="usuarios"></div>
+    <div ui-view="categoriascreate"></div>
+    <div ui-view="categoriaslist"></div>
+    <div ui-view="usuarioslist"></div>
+    <div ui-view="usuarioscreate"></div>
+    <!-- Fin contenido Página aqui van los nombres de las directivas-->
+
+     <!-- El piepagina es el footer, solo que no se puede colocar footer, porque html,
+    ya tiene una etiqueta con ese nombre -->
+   <div ui-view="piepagina" class="piedepagina"></div>
+
+
+    <!-- build:js js/vendor.min.js -->
+    <!-- bower:js -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="lib/angular-filter/dist/angular-filter.min.js"></script>
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="lib/satellizer/satellizer.js"></script>
+    <script src="lib/angular-material/angular-material.js"></script>
+
+
+
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js js/app.min.js -->
+    <!-- inject:js -->
+    <script src="/app/app.module.js"></script>
+    <script src="/app/templates.js"></script>
+    <script src="/app/admin/app.controller.js"></script>
+    <script src="/app/admin/app.directivas.js"></script>
+    <script src="/app/admin/app.module.js"></script>
+    <script src="/app/admin/app.route.js"></script>
+    <script src="/app/admin/app.services.js"></script>
+    <script src="/app/categorias/app.controller.js"></script>
+    <script src="/app/categorias/app.directivas.js"></script>
+    <script src="/app/categorias/app.module.js"></script>
+    <script src="/app/categorias/app.router.js"></script>
+    <script src="/app/categorias/app.services.js"></script>
+    <script src="/app/footer/app.directivas.js"></script>
+    <script src="/app/footer/app.module.js"></script>
+    <script src="/app/config/app.constantes.js"></script>
+    <script src="/app/header/app.directivas.js"></script>
+    <script src="/app/header/app.module.js"></script>
+    <script src="/app/inicio/app.controller.js"></script>
+    <script src="/app/inicio/app.directivas.js"></script>
+    <script src="/app/inicio/app.module.js"></script>
+    <script src="/app/inicio/app.route.js"></script>
+    <script src="/app/servicios/app.controller.js"></script>
+    <script src="/app/servicios/app.module.js"></script>
+    <script src="/app/servicios/app.services.js"></script>
+    <script src="/app/login/app.controller.js"></script>
+    <script src="/app/login/app.module.js"></script>
+    <script src="/app/usuarios/app.controller.js"></script>
+    <script src="/app/usuarios/app.directivas.js"></script>
+    <script src="/app/usuarios/app.router.js"></script>
+    <script src="/app/usuarios/app.services.js"></script>
+    <script src="/app/usuarios/app.usuarios.module.js"></script>
+    <!-- endinject -->
+    <!-- endbuild -->
+
+</body>
+
+</html>

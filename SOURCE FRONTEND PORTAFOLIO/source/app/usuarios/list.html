@@ -1,0 +1,42 @@
+<div class="categorias">
+<h4>LSTAD DE CATEGORIAS</h4>
+<a href="#usuarios/create">CREAR USUARIOS</a>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+			<th>Apellidos</th>
+      <th>Telefono</th>
+			<th>Direccion</th>
+			<th>Email</th>
+      <th>Sexo</th>
+      <th>Fecha de Nacimiento</th>
+			<th>Password</th>
+      <th>usuarioVendedor</th>
+			<th>IdCiudad</th>
+      <th>idDepartamento</th>
+
+    </tr>
+  </thead>
+  <body>
+    <tr ng-repeat ="usuario in vmc.usuariosList">
+      <td>{{usuario.idUsuario}}</td>
+      <td>{{usuario.nombres}}</td>
+      <td>{{usuario.apellidos}}</td>
+      <td>{{usuario.telefono}}</td>
+      <td>{{usuario.direccion}}</td>
+      <td>{{usuario.email}}</td>
+      <td>{{usuario.sexo}}</td>
+      <td>{{usuario.fechaNac}}</td>
+      <td>{{usuario.password}}</td>
+      <td>{{usuario.usuarioVendedor}}</td>
+      <td>{{usuario.ciudadesPK.idCiudad}}</td><!--averiguar como mostrar cuando son llaves compartidas-->
+      <td>{{usuario.ciudadesPK.idDepartamento}}</td>
+
+    </tr>
+  </body>
+
+</table>
+<a href="#/">Ir a Inicio</a>
+</div>
